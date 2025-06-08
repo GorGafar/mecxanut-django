@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 # Create your models here.
 class Category(models.Model):
-    Category_name = models.CharField(max_length=50, unique=True)
+    category_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     description = models.TextField(max_length=255, blank=True)
     cat_image = models.ImageField('photos/categories/',blank=True)
@@ -15,4 +15,4 @@ class Category(models.Model):
         return reverse('products_by_category',args=[self.slug])
     
     def __str__(self):
-        return self.Category_name
+        return self.category_name
