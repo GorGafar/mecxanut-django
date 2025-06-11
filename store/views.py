@@ -6,7 +6,6 @@ from django.db.models import Q
 # Create your views here.
 from carts.views import _cart_id
 from django.core.paginator import EmptyPage,PageNotAnInteger,Paginator
-from django.http import HttpResponse
 
 
 
